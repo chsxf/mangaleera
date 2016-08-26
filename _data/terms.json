@@ -1,0 +1,766 @@
+{
+    "categories": [
+        {
+            "id": "19",
+            "name": "Agenda des sorties",
+            "description": "Liste des sorties mise \u00e0 jour mensuellement",
+            "slug": "agenda-des-sorties",
+            "post_count": "30",
+            "parent": "14"
+        },
+        {
+            "id": "5",
+            "name": "Anime",
+            "description": "Chroniques d'anime",
+            "slug": "anime",
+            "post_count": "11",
+            "parent": "3"
+        },
+        {
+            "id": "17",
+            "name": "Artistes",
+            "description": "",
+            "slug": "artistes",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "10",
+            "name": "Blog",
+            "description": "Sont regroup\u00e9es ici les notes en rapport avec le blog (mises \u00e0 jour, modifications, etc...)",
+            "slug": "blog",
+            "post_count": "13",
+            "parent": "0"
+        },
+        {
+            "id": "16",
+            "name": "Boutiques",
+            "description": "",
+            "slug": "boutiques",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "3",
+            "name": "Chroniques",
+            "description": "Chroniques d'oeuvres nouvelles ou anciennes.",
+            "slug": "chroniques",
+            "post_count": "103",
+            "parent": "0"
+        },
+        {
+            "id": "25",
+            "name": "Communiqu\u00e9s de presse",
+            "description": "",
+            "slug": "communiques-de-presse",
+            "post_count": "11",
+            "parent": "24"
+        },
+        {
+            "id": "27",
+            "name": "Concours",
+            "description": "",
+            "slug": "concours",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "15",
+            "name": "Conventions / Expos",
+            "description": "Annonces et comptes-rendus de conventions et d'expositions",
+            "slug": "conventions-expos",
+            "post_count": "9",
+            "parent": "0"
+        },
+        {
+            "id": "1",
+            "name": "Divers",
+            "description": "Regroupe tous les articles que l'on ne peut pas classer ailleurs.",
+            "slug": "divers",
+            "post_count": "18",
+            "parent": "0"
+        },
+        {
+            "id": "11",
+            "name": "Dossiers",
+            "description": "Annonces des dossiers",
+            "slug": "dossiers",
+            "post_count": "3",
+            "parent": "0"
+        },
+        {
+            "id": "23",
+            "name": "Editeurs",
+            "description": "",
+            "slug": "editeurs",
+            "post_count": "4",
+            "parent": "0"
+        },
+        {
+            "id": "12",
+            "name": "Goodies",
+            "description": "",
+            "slug": "goodies",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "8",
+            "name": "Japon",
+            "description": "Articles traitant du Japon et sa culture",
+            "slug": "japon",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "7",
+            "name": "Jeux vid\u00e9o",
+            "description": "Histoires de jeux japonais.",
+            "slug": "jeux-video",
+            "post_count": "7",
+            "parent": "0"
+        },
+        {
+            "id": "28",
+            "name": "Lectures de la semaine",
+            "description": "",
+            "slug": "lectures-de-la-semaine",
+            "post_count": "6",
+            "parent": "3"
+        },
+        {
+            "id": "20",
+            "name": "Liens divers",
+            "description": "",
+            "slug": "liens-divers",
+            "post_count": "0",
+            "parent": "0"
+        },
+        {
+            "id": "13",
+            "name": "Livres",
+            "description": "Chroniques de livres",
+            "slug": "livres",
+            "post_count": "1",
+            "parent": "3"
+        },
+        {
+            "id": "4",
+            "name": "Manga",
+            "description": "Chroniques de manga",
+            "slug": "manga",
+            "post_count": "84",
+            "parent": "3"
+        },
+        {
+            "id": "98",
+            "name": "Offres sp\u00e9ciales",
+            "description": "",
+            "slug": "offres-speciales",
+            "post_count": "1",
+            "parent": "0"
+        },
+        {
+            "id": "24",
+            "name": "Presse / Webzines",
+            "description": "",
+            "slug": "presse",
+            "post_count": "2",
+            "parent": "0"
+        },
+        {
+            "id": "9",
+            "name": "Produits d\u00e9riv\u00e9s",
+            "description": "Etude qualit\u00e9 de produits d\u00e9riv\u00e9s de manga ou d'anime",
+            "slug": "produits-derives",
+            "post_count": "5",
+            "parent": "3"
+        },
+        {
+            "id": "2",
+            "name": "Revue de presse",
+            "description": "Des articles qui parlent d'autres articles.",
+            "slug": "revue-de-presse",
+            "post_count": "21",
+            "parent": "24"
+        },
+        {
+            "id": "6",
+            "name": "S\u00e9ries compl\u00e8tes",
+            "description": "Chroniques de s\u00e9ries compl\u00e8tes (manga ou anime)",
+            "slug": "series-completes",
+            "post_count": "23",
+            "parent": "3"
+        },
+        {
+            "id": "14",
+            "name": "Sorties",
+            "description": "",
+            "slug": "sorties",
+            "post_count": "4",
+            "parent": "0"
+        }
+    ],
+    "tags": [
+        {
+            "id": "78",
+            "name": ".hack",
+            "description": "",
+            "slug": "hack",
+            "post_count": "1"
+        },
+        {
+            "id": "59",
+            "name": "air gear",
+            "description": "",
+            "slug": "air-gear",
+            "post_count": "1"
+        },
+        {
+            "id": "85",
+            "name": "akai",
+            "description": "",
+            "slug": "akai",
+            "post_count": "1"
+        },
+        {
+            "id": "35",
+            "name": "akihiro ito",
+            "description": "",
+            "slug": "akihiro-ito",
+            "post_count": "1"
+        },
+        {
+            "id": "41",
+            "name": "angel heart",
+            "description": "",
+            "slug": "angel-heart",
+            "post_count": "1"
+        },
+        {
+            "id": "29",
+            "name": "animeland",
+            "description": "",
+            "slug": "animeland",
+            "post_count": "7"
+        },
+        {
+            "id": "52",
+            "name": "ankama",
+            "description": "",
+            "slug": "ankama",
+            "post_count": "6"
+        },
+        {
+            "id": "103",
+            "name": "ankama convention",
+            "description": "",
+            "slug": "ankama-convention",
+            "post_count": "1"
+        },
+        {
+            "id": "31",
+            "name": "appleseed",
+            "description": "",
+            "slug": "appleseed",
+            "post_count": "1"
+        },
+        {
+            "id": "38",
+            "name": "beck",
+            "description": "",
+            "slug": "beck",
+            "post_count": "2"
+        },
+        {
+            "id": "55",
+            "name": "benjamin",
+            "description": "",
+            "slug": "benjamin",
+            "post_count": "2"
+        },
+        {
+            "id": "109",
+            "name": "bloodkyu",
+            "description": "",
+            "slug": "bloodkyu",
+            "post_count": "1"
+        },
+        {
+            "id": "90",
+            "name": "blookkyu",
+            "description": "",
+            "slug": "blookkyu",
+            "post_count": "1"
+        },
+        {
+            "id": "36",
+            "name": "chronique",
+            "description": "",
+            "slug": "chronique",
+            "post_count": "1"
+        },
+        {
+            "id": "51",
+            "name": "city hunter",
+            "description": "",
+            "slug": "city-hunter",
+            "post_count": "3"
+        },
+        {
+            "id": "79",
+            "name": "clamp",
+            "description": "",
+            "slug": "clamp",
+            "post_count": "1"
+        },
+        {
+            "id": "101",
+            "name": "collection nostalgie",
+            "description": "",
+            "slug": "collection-nostalgie",
+            "post_count": "1"
+        },
+        {
+            "id": "47",
+            "name": "collector",
+            "description": "",
+            "slug": "collector",
+            "post_count": "1"
+        },
+        {
+            "id": "71",
+            "name": "communiqu\u00e9 de presse",
+            "description": "",
+            "slug": "communique-de-presse",
+            "post_count": "1"
+        },
+        {
+            "id": "94",
+            "name": "concert",
+            "description": "",
+            "slug": "concert",
+            "post_count": "1"
+        },
+        {
+            "id": "48",
+            "name": "conseil",
+            "description": "",
+            "slug": "conseil",
+            "post_count": "1"
+        },
+        {
+            "id": "96",
+            "name": "convention",
+            "description": "",
+            "slug": "convention",
+            "post_count": "1"
+        },
+        {
+            "id": "56",
+            "name": "death note",
+            "description": "",
+            "slug": "death-note",
+            "post_count": "4"
+        },
+        {
+            "id": "99",
+            "name": "declic images",
+            "description": "",
+            "slug": "declic-images",
+            "post_count": "1"
+        },
+        {
+            "id": "84",
+            "name": "devil may cry",
+            "description": "",
+            "slug": "devil-may-cry",
+            "post_count": "1"
+        },
+        {
+            "id": "53",
+            "name": "dofus",
+            "description": "",
+            "slug": "dofus",
+            "post_count": "4"
+        },
+        {
+            "id": "43",
+            "name": "dofus monster",
+            "description": "",
+            "slug": "dofus-monster",
+            "post_count": "2"
+        },
+        {
+            "id": "87",
+            "name": "dotanuki",
+            "description": "",
+            "slug": "dotanuki",
+            "post_count": "3"
+        },
+        {
+            "id": "49",
+            "name": "dragon ball",
+            "description": "",
+            "slug": "dragon-ball",
+            "post_count": "2"
+        },
+        {
+            "id": "86",
+            "name": "editeur",
+            "description": "",
+            "slug": "editeur",
+            "post_count": "1"
+        },
+        {
+            "id": "91",
+            "name": "editions akai",
+            "description": "",
+            "slug": "editions-akai",
+            "post_count": "3"
+        },
+        {
+            "id": "65",
+            "name": "festival d'animation d'annecy",
+            "description": "",
+            "slug": "festival-danimation-dannecy",
+            "post_count": "1"
+        },
+        {
+            "id": "88",
+            "name": "glenat",
+            "description": "",
+            "slug": "glenat",
+            "post_count": "1"
+        },
+        {
+            "id": "108",
+            "name": "gundam",
+            "description": "",
+            "slug": "gundam",
+            "post_count": "1"
+        },
+        {
+            "id": "63",
+            "name": "haruhi suzumiya",
+            "description": "",
+            "slug": "haruhi-suzumiya",
+            "post_count": "2"
+        },
+        {
+            "id": "77",
+            "name": "hunter x hunter",
+            "description": "",
+            "slug": "hunter-x-hunter",
+            "post_count": "1"
+        },
+        {
+            "id": "81",
+            "name": "ikki tousen",
+            "description": "",
+            "slug": "ikki-tousen",
+            "post_count": "1"
+        },
+        {
+            "id": "50",
+            "name": "\u00efs",
+            "description": "",
+            "slug": "is",
+            "post_count": "1"
+        },
+        {
+            "id": "66",
+            "name": "japan expo",
+            "description": "",
+            "slug": "japan-expo",
+            "post_count": "2"
+        },
+        {
+            "id": "95",
+            "name": "japan masturi",
+            "description": "",
+            "slug": "japan-masturi",
+            "post_count": "1"
+        },
+        {
+            "id": "67",
+            "name": "je",
+            "description": "",
+            "slug": "je",
+            "post_count": "1"
+        },
+        {
+            "id": "89",
+            "name": "katsuhiro otomo",
+            "description": "",
+            "slug": "katsuhiro-otomo",
+            "post_count": "1"
+        },
+        {
+            "id": "83",
+            "name": "kazuo koike",
+            "description": "",
+            "slug": "kazuo-koike",
+            "post_count": "1"
+        },
+        {
+            "id": "92",
+            "name": "lecture en ligne",
+            "description": "",
+            "slug": "lecture-en-ligne",
+            "post_count": "1"
+        },
+        {
+            "id": "32",
+            "name": "lectures",
+            "description": "",
+            "slug": "lectures",
+            "post_count": "6"
+        },
+        {
+            "id": "62",
+            "name": "magazine",
+            "description": "",
+            "slug": "magazine",
+            "post_count": "1"
+        },
+        {
+            "id": "58",
+            "name": "magister negi magi",
+            "description": "",
+            "slug": "magister-negi-magi",
+            "post_count": "1"
+        },
+        {
+            "id": "33",
+            "name": "mai",
+            "description": "",
+            "slug": "mai",
+            "post_count": "0"
+        },
+        {
+            "id": "111",
+            "name": "Manga",
+            "description": "",
+            "slug": "manga",
+            "post_count": "9"
+        },
+        {
+            "id": "100",
+            "name": "manga distribution",
+            "description": "",
+            "slug": "manga-distribution",
+            "post_count": "1"
+        },
+        {
+            "id": "105",
+            "name": "microsoft",
+            "description": "",
+            "slug": "microsoft",
+            "post_count": "1"
+        },
+        {
+            "id": "106",
+            "name": "miyavi",
+            "description": "",
+            "slug": "miyavi",
+            "post_count": "1"
+        },
+        {
+            "id": "97",
+            "name": "montpellier",
+            "description": "",
+            "slug": "montpellier",
+            "post_count": "1"
+        },
+        {
+            "id": "57",
+            "name": "negima",
+            "description": "",
+            "slug": "negima",
+            "post_count": "1"
+        },
+        {
+            "id": "70",
+            "name": "obata",
+            "description": "",
+            "slug": "obata",
+            "post_count": "1"
+        },
+        {
+            "id": "39",
+            "name": "one piece",
+            "description": "",
+            "slug": "one-piece",
+            "post_count": "3"
+        },
+        {
+            "id": "110",
+            "name": "paris manga",
+            "description": "",
+            "slug": "paris-manga",
+            "post_count": "1"
+        },
+        {
+            "id": "115",
+            "name": "Presse / Webzines",
+            "description": "",
+            "slug": "presse",
+            "post_count": "1"
+        },
+        {
+            "id": "60",
+            "name": "real",
+            "description": "",
+            "slug": "real",
+            "post_count": "0"
+        },
+        {
+            "id": "54",
+            "name": "remember",
+            "description": "",
+            "slug": "remember",
+            "post_count": "1"
+        },
+        {
+            "id": "46",
+            "name": "rose hip rose",
+            "description": "",
+            "slug": "rose-hip-rose",
+            "post_count": "1"
+        },
+        {
+            "id": "30",
+            "name": "saint seya",
+            "description": "",
+            "slug": "saint-seya",
+            "post_count": "1"
+        },
+        {
+            "id": "72",
+            "name": "samji",
+            "description": "",
+            "slug": "samji",
+            "post_count": "1"
+        },
+        {
+            "id": "75",
+            "name": "saphira",
+            "description": "",
+            "slug": "saphira",
+            "post_count": "1"
+        },
+        {
+            "id": "102",
+            "name": "scantrad",
+            "description": "",
+            "slug": "scantrad",
+            "post_count": "1"
+        },
+        {
+            "id": "73",
+            "name": "seebd",
+            "description": "",
+            "slug": "seebd",
+            "post_count": "1"
+        },
+        {
+            "id": "64",
+            "name": "sh\u00f4nen jump",
+            "description": "",
+            "slug": "shonen-jump",
+            "post_count": "1"
+        },
+        {
+            "id": "45",
+            "name": "step up love story",
+            "description": "",
+            "slug": "step-up-love-story",
+            "post_count": "1"
+        },
+        {
+            "id": "37",
+            "name": "suzuka",
+            "description": "",
+            "slug": "suzuka",
+            "post_count": "2"
+        },
+        {
+            "id": "74",
+            "name": "tokebi",
+            "description": "",
+            "slug": "tokebi",
+            "post_count": "1"
+        },
+        {
+            "id": "44",
+            "name": "tokk\u00f4",
+            "description": "",
+            "slug": "tokko",
+            "post_count": "1"
+        },
+        {
+            "id": "107",
+            "name": "tokyo babylon",
+            "description": "",
+            "slug": "tokyo-babylon",
+            "post_count": "1"
+        },
+        {
+            "id": "61",
+            "name": "tsubasa reservoir chronicle",
+            "description": "",
+            "slug": "tsubasa-reservoir-chronicle",
+            "post_count": "0"
+        },
+        {
+            "id": "80",
+            "name": "utada hikaru",
+            "description": "",
+            "slug": "utada-hikaru",
+            "post_count": "1"
+        },
+        {
+            "id": "93",
+            "name": "video games live",
+            "description": "",
+            "slug": "video-games-live",
+            "post_count": "1"
+        },
+        {
+            "id": "76",
+            "name": "wakfu",
+            "description": "",
+            "slug": "wakfu",
+            "post_count": "2"
+        },
+        {
+            "id": "34",
+            "name": "wilderness",
+            "description": "",
+            "slug": "wilderness",
+            "post_count": "1"
+        },
+        {
+            "id": "104",
+            "name": "xbox 360",
+            "description": "",
+            "slug": "xbox-360",
+            "post_count": "1"
+        },
+        {
+            "id": "40",
+            "name": "yakitate ja-pan",
+            "description": "",
+            "slug": "yakitate-ja-pan",
+            "post_count": "2"
+        },
+        {
+            "id": "82",
+            "name": "yoshifumi kond\u00f4",
+            "description": "",
+            "slug": "yoshifumi-kondo",
+            "post_count": "1"
+        }
+    ]
+}

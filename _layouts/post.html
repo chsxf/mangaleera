@@ -1,15 +1,86 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div id="mainpage">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+	<a href="#" onclick="history.back(); return false;" id="back-link" class="screen">Retour</a>
+	<h1><a href="{{ page.post_url }}">{{ page.title }}</a></h1>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+	<div class="module">
+		<div><img src="css/images/inside/header.jpg" class="screen" /></div>
+		<div class="contents">
+			<div class="postmeta">
+				<p>
+					<a href="{{ page.post_url }}">
+						<img src="database/manga/kana/gamaran/couv_001.jpg" alt="{{ page.title}}" class="content" border="0" />
+					</a>
+				</p>
+				<p rel="zoomable">
+				{% assign arr = site.empty_array %}
+				{% for meta in page.meta %}
+					{% assign meta_first = meta.name | truncate: 1, "" %}
+					{% unless meta_first == "." %}
+						{% capture meta_content %}{{ meta.name }}:<br /><strong>{{ meta.value }}</strong>{% endcapture %}
+						{% assign arr = arr | push: meta_content %}
+					{% endunless %}
+				{% endfor %}
+					{{ arr | join: "<br />" }}
+				</p>
+				<p class="screen">Cat&eacute;gories :<br />
+				{% assign arr = site.empty_array %}
+				{% for cat in page.categories %}
+					{% assign slug = cat %}
+					{% for cat_term in site.data.terms.categories %}
+						{% if cat_term.slug == cat %}
+							{% assign cat_name = cat_term.name %}
+							{% if cat_term.parent != "0" %}
+								{% for cat_term2 in site.data.terms.categories %}
+									{% if cat_term2.id == cat_term.parent %}
+										{% assign slug = slug | prepend: "/" | prepend: cat_term2.slug %}
+										{% break %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+							{% break %}
+						{% endif %}
+					{% endfor %}
+					{% capture cat_content %}<a href="{{ slug | prepend: "/" | prepend: site.baseurl }}" rel="category tag">{{ cat_name }}</a>{% endcapture %}
+					{% assign arr = arr | push: cat_content %}
+				{% endfor %}
+					{{ arr | join: "<br />" }}
+				</p>
+			</div>
 
-</article>
+			<div class="texttools screen">
+				<a href="#" rel="zoom-increase" title="Augmenter la taille du texte"><img src="css/images/icone-texte-plus.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="5" />
+				<a href="#" rel="zoom-reset" title="Rétablir la taille du texte"><img src="css/images/icone-texte-normal.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="5" />
+				<a href="#" rel="zoom-decrease" title="Diminuer la taille du texte"><img src="css/images/icone-texte-moins.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="30" />
+				<a href="#" onclick="window.print(); return false;" title="Imprimer"><img src="css/images/icone-imprimante.png" border="0" /></a>
+			</div>
+
+			<div class="postcontent" rel="zoomable">
+				{% assign meta_citation = page.meta | where: "name",".citation" %}
+				{% assign count = meta_citation | size %}
+				{% if count == 1 %}
+				<blockquote class="citation">{{ meta_citation[0].value }}</blockquote>
+				{% endif %}
+
+				{{ content }}
+
+				<p class="postcredits"><img alt='' src='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625' srcset='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />Chronique publi&eacute;e le 06 janvier 2014<br />
+				<!-- http://alanwsmith.com/jekyll-liquid-date-formatting-examples -->
+				par <strong>Christophe SAUVEUR</strong></p>
+			</div>
+			<div class="postnavlinks screen">
+				<div id="navlink-prev">&laquo; <a href="http://www.mangaleera.com/index.php/cetait-nous-vol-16/" rel="prev">C&rsquo;était Nous &#8211; Vol.16</a></div>
+				<div id="navlink-next"></div>
+				<div class="clear"></div></div>
+			</div>
+
+			<img src="css/images/inside/footer.jpg" class="screen" />
+		</div>
+
+</div>

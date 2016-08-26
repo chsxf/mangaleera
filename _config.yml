@@ -5,19 +5,36 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-port: 8888
-
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/mangaleera" # the subpath of your site, e.g. /blog
-url: "https://xhaleera.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-
 # Build settings
 markdown: kramdown
+
+# Site settings
+baseurl: "/mangaleera" # the subpath of your site, e.g. /blog
+url: "https://xhaleera.github.io" # the base hostname & protocol for your site
+
+# Meta settings
+title: Mangaleera » Chroniques manga
+description: "Mangaleera : Chroniques manga, anime, Japon - Planning des sorties manga"
+keywords: "manga, japon, anime, chronique, sortie, planning, librairie, bd"
+google_verify: "_sh3dTOkxFbphrHcjok76nc3hyhie2kYfo5CAmyZBFg"
+
+# Compress HTML
+compress_html:
+  blanklines: true
+
+# Frontmatter defaults
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/:slug"
+
+# Useful
+empty_array: []
+
+# A supprimer
+email: your-email@domain.com
+twitter_username: jekyllrb
+github_username:  jekyll

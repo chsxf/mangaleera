@@ -1,0 +1,119 @@
+* {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.screen {
+	display: none;
+}
+
+#mainpage h1 {
+	font-size: 24px;
+	color: black;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 20px;
+	padding: 0px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #666666;
+}
+#mainpage h1 a {
+	text-decoration: none;
+	color: black;
+}
+#mainpage h1 a:hover {
+	color: #9a4819;
+}
+#mainpage div.module div.contents {
+	padding: 10px 10px;
+}
+#mainpage div.module div.contents p {
+	margin: 0px;
+	margin-top: 20px;
+	text-align: justify;
+	font-size: 12px;
+}
+#mainpage div.module div.contents p[align="center"] {
+	text-align: center;
+}
+#mainpage div.module div.contents p:first-child {
+	margin-top: 0px;
+}
+#mainpage div.module div.contents a {
+	color: #9a4819;
+	font-weight: bold;
+	text-decoration: none;
+}
+#mainpage div.module div.contents a:hover {
+	text-decoration: underline;
+}
+#mainpage div.module div.contents div.postmeta {
+	float: right;
+	width: 168px;
+	color: #999999;
+	font-size: 75%;
+}
+#mainpage div.module div.contents div.postmeta * {
+	text-align: left;
+	font-size: 10px;
+}
+#mainpage div.module div.contents div.postcontent {
+	margin-left: 0px;
+	margin-right: 200px;
+}
+#mainpage div.module div.contents p.postcredits {
+	padding-top: 30px;
+	height: 48px;
+	text-align: right;
+	color: #999999;
+}
+#mainpage p.postcredits img {
+	float: right;
+	margin-left: 5px;
+}
+#mainpage div.module div.contents div.postsample {
+	padding: 30px 0px;
+	border-bottom: 1px solid #9a4819;
+	overflow: hidden;
+}
+#mainpage div.module div.contents div.postsample:first-child {
+	padding-top: 0px;
+}
+#mainpage div.module div.contents div.postsample.alt {
+	background-color: #f9f2ed;
+}
+#mainpage div.module div.contents div.postsample p {
+	margin-right: 200px;
+}
+#mainpage div.module div.contents div.postsample h1 {
+	font-size: 18px;
+	margin: 0px;
+	border-bottom: none;
+}
+#mainpage div.module div.contents div.postsample h1 a {
+	color: black;
+}
+#mainpage div.module div.contents div.postsample h1 a:hover {
+	color: #9a4819;
+	text-decoration: none;
+}
+#mainpage div.module div.contents div.postsample a.illustration {
+	float: right;
+	margin-left: 15px;
+}
+
+#footer {
+	font-size: 10px;
+	margin: 0px 10px;
+	padding: 10px 0px;
+	border-top: 1px solid #666666;
+	color: #666666;
+}
+#footer a {
+	color: #666666;
+	font-weight: bold;
+	text-decoration: none;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
