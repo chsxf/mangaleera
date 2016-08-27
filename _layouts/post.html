@@ -10,16 +10,22 @@ layout: default
 		<div class="module-header screen"><img src="css/images/inside/header.jpg" /></div>
 		<div class="contents">
 			<div class="postmeta">
+				{% assign meta_illus = page.meta | where: "name",".illustration" %}
+				{% if meta_illus.size == 1 %}
 				<p>
 					<a href="{{ page.post_url }}">
-						{% assign meta_illus = page.meta | where: "name",".illustration" %}
-						{% assign count = meta_illus | size %}
-						{% if count == 1 %}
 						<img src="{{ meta_illus[0].value | prepend: "/database/" | prepend: site.baseurl }}" alt="{{ page.title }}" class="content" border="0" />
-						{% endif %}
 					</a>
 				</p>
-				<p rel="zoomable">
+				{% endif %}
+
+				{% assign meta_verdict = page.meta | where: "name",".verdict" %}
+				{% if meta_verdict.size == 1%}
+				<p>
+					<img class="content" alt="Verdict" src="{{ meta_verdict[0].value | prepend: "/database/" | prepend: site.baseurl }}">
+				</p>
+				{% endif %}
+
 				{% assign arr = site.empty_array %}
 				{% for meta in page.meta %}
 					{% assign meta_first = meta.name | truncate: 1, "" %}
@@ -28,8 +34,12 @@ layout: default
 						{% assign arr = arr | push: meta_content %}
 					{% endunless %}
 				{% endfor %}
+				{% if arr.size > 0 %}
+				<p rel="zoomable">
 					{{ arr | join: "<br />" }}
 				</p>
+				{% endif %}
+
 				<p class="screen">Cat&eacute;gories :<br />
 				{% assign arr = site.empty_array %}
 				{% for cat in page.categories %}
@@ -48,10 +58,26 @@ layout: default
 							{% break %}
 						{% endif %}
 					{% endfor %}
-					{% capture cat_content %}<a href="{{ slug | prepend: "/" | prepend: site.baseurl }}" rel="category tag">{{ cat_name }}</a>{% endcapture %}
+					{% capture cat_content %}<a href="{{ slug | prepend: "/category/" | prepend: site.baseurl }}" rel="category tag">{{ cat_name }}</a>{% endcapture %}
 					{% assign arr = arr | push: cat_content %}
 				{% endfor %}
 					{{ arr | join: "<br />" }}
+
+				{% assign arr = site.empty_array %}
+				{% for tag in page.tags %}
+					{% for tag_term in site.data.terms.tags %}
+						{% if tag_term.slug == tag %}
+							{% assign tag_name = tag_term.name %}
+							{% break %}
+						{% endif %}
+					{% endfor %}
+					{% capture tag_content %}<a href="{{ tag | prepend: "/tag/" | prepend: site.baseurl }}" rel="category tag">{{ tag_name }}</a>{% endcapture %}
+					{% assign arr = arr | push: tag_content %}
+				{% endfor %}
+				{% if arr.size > 0 %}
+					<br />Tags :<br />
+					{{ arr | join: "<br />" }}
+				{% endif %}
 				</p>
 			</div>
 
@@ -66,9 +92,15 @@ layout: default
 			</div>
 
 			<div class="postcontent" rel="zoomable">
+				{% assign meta_spoilers = page.meta | where: "name",".spoilers" %}
+				{% if meta_spoilers.size == 1 %}
+				<p class="spoilers"><strong>Attention, spoilers !</strong><br>
+				Les paragraphes qui suivent peuvent révéler des éléments importants de l'histoire.<br>
+				Ne poursuivez pas votre lecture si vous ne souhaitez pas connaître avant l'heure le déroulement des <em>manga</em> concernés.</p>
+				{% endif %}
+
 				{% assign meta_citation = page.meta | where: "name",".citation" %}
-				{% assign count = meta_citation | size %}
-				{% if count == 1 %}
+				{% if meta_citation.size == 1 %}
 				<blockquote class="citation">{{ meta_citation[0].value }}</blockquote>
 				{% endif %}
 
