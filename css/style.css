@@ -330,6 +330,9 @@ form select, form input[type="text"] {
 #mainpage h1 a:hover {
 	color: #9a4819;
 }
+#mainpage div.module-header, #mainpage div.module-footer {
+	line-height: 0;
+}
 #mainpage div.module div.contents {
 	background-image: url(images/inside/background.jpg);
 	background-repeat: repeat-y;

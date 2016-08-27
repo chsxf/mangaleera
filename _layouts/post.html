@@ -7,12 +7,16 @@ layout: default
 	<h1><a href="{{ page.post_url }}">{{ page.title }}</a></h1>
 
 	<div class="module">
-		<div><img src="css/images/inside/header.jpg" class="screen" /></div>
+		<div class="module-header screen"><img src="css/images/inside/header.jpg" /></div>
 		<div class="contents">
 			<div class="postmeta">
 				<p>
 					<a href="{{ page.post_url }}">
-						<img src="database/manga/kana/gamaran/couv_001.jpg" alt="{{ page.title}}" class="content" border="0" />
+						{% assign meta_illus = page.meta | where: "name",".illustration" %}
+						{% assign count = meta_illus | size %}
+						{% if count == 1 %}
+						<img src="{{ meta_illus[0].value | prepend: "/database/" | prepend: site.baseurl }}" alt="{{ page.title }}" class="content" border="0" />
+						{% endif %}
 					</a>
 				</p>
 				<p rel="zoomable">
@@ -70,17 +74,43 @@ layout: default
 
 				{{ content }}
 
-				<p class="postcredits"><img alt='' src='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625' srcset='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />Chronique publi&eacute;e le 06 janvier 2014<br />
-				<!-- http://alanwsmith.com/jekyll-liquid-date-formatting-examples -->
-				par <strong>Christophe SAUVEUR</strong></p>
+				{% capture formatted_date %}
+					{% assign m = page.date | date: "%-m" %}
+					{{ page.date | date: "%d" }}
+					{% case m %}
+					  {% when '1' %}janvier
+					  {% when '2' %}février
+					  {% when '3' %}mars
+					  {% when '4' %}avril
+					  {% when '5' %}mai
+					  {% when '6' %}juin
+					  {% when '7' %}juillet
+					  {% when '8' %}août
+					  {% when '9' %}septembre
+					  {% when '10' %}octobre
+					  {% when '11' %}novembre
+					  {% when '12' %}décembre
+					{% endcase %}
+					{{ page.date | date: "%Y" }}
+				{% endcapture %}
+
+				<p class="postcredits"><img alt='' src='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625' srcset='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />Chronique publi&eacute;e le {{ formatted_date }}<br /> par <strong>Christophe SAUVEUR</strong></p>
 			</div>
 			<div class="postnavlinks screen">
-				<div id="navlink-prev">&laquo; <a href="http://www.mangaleera.com/index.php/cetait-nous-vol-16/" rel="prev">C&rsquo;était Nous &#8211; Vol.16</a></div>
-				<div id="navlink-next"></div>
+				<div id="navlink-prev">
+					{% if page.previous %}
+					&laquo; <a href="{{ page.previous.url | prepend: site.baseurl }}" rel="prev">{{ page.previous.title }}</a>
+					{% endif %}
+				</div>
+				<div id="navlink-next">
+					{% if page.next %}
+					<a href="{{ page.next.url | prepend: site.baseurl }}" rel="next">{{ page.next.title }}</a> &raquo;
+					{% endif %}
+				</div>
 				<div class="clear"></div></div>
 			</div>
 
-			<img src="css/images/inside/footer.jpg" class="screen" />
+			<div class="module-footer screen"><img src="css/images/inside/footer.jpg" /></div>
 		</div>
 
 </div>
