@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div id="mainpage">
+
+	<a href="#" onclick="history.back(); return false;" id="back-link" class="screen">Retour</a>
+    <h1><a href="{{ page.post_url }}">{{ page.title }}</a></h1>
+    
+    <div class="module">
+        <div class="module-header screen"><img src="css/images/inside/header.jpg" /></div>
+        <div class="contents">
+        {% assign alt = 0 %}
+        {% for dossier in site.dossiers %}
+            {% if alt == 1 %}
+                {% assign alt_class = "alt" %}
+            {% else %}
+                {% assign alt_class = "" %}
+            {% endif %}
+            {% assign alt = alt | plus: 1 | modulo: 2 %}
+
+            {% assign url = dossier.slug | prepend: "/dossier-" | prepend: site.baseurl %}
+            {% assign title = dossier.name | prepend: "Dossier : " %}
+            <div class="postsample {{ alt_class }}">
+                <a href="{{ url }}" class="illustration" title="{{ title }}"><img src="{{ dossier.illustration | prepend: "/database/" | prepend: site.baseurl }}" alt="{{ title }}" class="content" border="0" /></a>
+                <h1><a href="{{ url }}">{{ title }}</a></h1>
+                <p>{{ dossier.content }} [...]</p>
+                <p class="screen"><a href="{{ url }}">Lire le dossier dans son intégralité</a></p>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="module-footer screen"><img src="css/images/inside/footer.jpg" /></div>
+    </div>
+
+</div>

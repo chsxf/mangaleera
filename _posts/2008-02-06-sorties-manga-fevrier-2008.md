@@ -103,7 +103,7 @@ categories:
 [Paquet Asie](http://www.paquet.li/asie/)- Non disponible
  
 [Pika](http://www.pika.fr/)- 20 février
-- [Suzuka Vol.5](/index.php/suzuka-vol-5)
+- [Suzuka Vol.5](suzuka-vol-5)
 - Mobile Suit Gundam The Origin Vol.8
 - Psychic Academy Vol.9
 - Shonen Junai Gumi Young GTO Vol.23

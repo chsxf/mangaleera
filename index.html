@@ -6,7 +6,9 @@ layout: home
 
 	<div id="alaune" class="module" style="background-image: url(database/unes/20080713-dossier-japan-expo-2008.jpg)">
 		<div class="contents">
-			<em>A la Une</em>&nbsp;&nbsp;<a href="/index.php/dossier-japan-expo-2008">Japan Expo 2008 : Le Dossier</a>
+			{% assign firstDossier = site.dossiers | first %}
+			{% assign url = firstDossier.slug | prepend: "/dossier-" | prepend: site.baseurl %}
+			<em>A la Une</em>&nbsp;&nbsp;<a href="{{ url }}">Japan Expo 2008 : Le Dossier</a>
 		</div>
 	</div>
 

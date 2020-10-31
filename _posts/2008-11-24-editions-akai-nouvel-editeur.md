@@ -16,7 +16,7 @@ tags:
   - "dotanuki"
 ---
 
-[Manga News se fait l'écho ce matin](http://www.manga-news.com/index.php/actus/2008/11/24/Les-editions-Akai-lancent-le-manga-low-cost) de l'arrivée prochaine sur le marché d'un nouvel éditeur dit _low-cost_ : les [Editions AKAI](http://www.editions-akai.fr/). Cet éditeur prévoit en effet de publier sur le marché français puis européen des _manga_ jusqu'à 6 fois moins chers que leurs homologues traditionnels en insérant des publicités.
+[Manga News se fait l'écho ce matin](http://www.manga-news.comactus/2008/11/24/Les-editions-Akai-lancent-le-manga-low-cost) de l'arrivée prochaine sur le marché d'un nouvel éditeur dit _low-cost_ : les [Editions AKAI](http://www.editions-akai.fr/). Cet éditeur prévoit en effet de publier sur le marché français puis européen des _manga_ jusqu'à 6 fois moins chers que leurs homologues traditionnels en insérant des publicités.
 
 La segmentation de leur collection est on ne peut plus classique : _shôjo_, _shônen_ et _seinen_.
 

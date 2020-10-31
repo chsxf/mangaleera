@@ -24,7 +24,7 @@ meta:
     value: "std:1596684"
 ---
 
-Comme vous avez pu le lire dans [cette précédente chronique](http://www.mangaleera.com/index.php/step-up-love-story-vol-5), **_Step Up Love Story_** ne m'avait jusqu'à présent pas convaincu. En toute franchise, si j'ai acheté le premier tome à sa sortie, c'était plus pour « évaluer » la plastique de Yura que pour essayer de comprendre le fonctionnement d'un couple. Mais, passé ce cap, à quoi bon acheter les volumes suivants s'ils se ressemblent tous. D'autant que le dessin d'**Aki Katsu** n'est pas des plus aguicheurs. J'ai pourtant poursuivi le _manga_, espérant naïvement que le niveau allait remonter.
+Comme vous avez pu le lire dans [cette précédente chronique](step-up-love-story-vol-5), **_Step Up Love Story_** ne m'avait jusqu'à présent pas convaincu. En toute franchise, si j'ai acheté le premier tome à sa sortie, c'était plus pour « évaluer » la plastique de Yura que pour essayer de comprendre le fonctionnement d'un couple. Mais, passé ce cap, à quoi bon acheter les volumes suivants s'ils se ressemblent tous. D'autant que le dessin d'**Aki Katsu** n'est pas des plus aguicheurs. J'ai pourtant poursuivi le _manga_, espérant naïvement que le niveau allait remonter.
 
 Et ce jour (béni ?) est peut-être enfin arrivé. Jusqu'à présent, nous avions à faire avec ce titre à une succession de coucheries légitimes d'un couple de jeunes mariés inexpérimentés qui se découvrent. Et bien que l'on ait pu apprécier la profondeur de la chose à maintes reprises, tout cela restait bien creux. Mais dans ce volume 6, Yura, qui était restée très effacée depuis le départ, commence à prendre des initiatives personnelles pour son propre bien. Voilà enfin une évolution salutaire dans ce _manga_ !
 

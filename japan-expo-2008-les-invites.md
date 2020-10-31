@@ -2,6 +2,8 @@
 layout: page
 title: "Japan Expo 2008 : Les Invités"
 slug: japan-expo-2008-les-invites
+illustration: dossiers/je2008/je2008-logo.jpg
+date: 2008-07-13 00:00:00 +0200
 ---
 
 Cette année encore la sélection d'invités présent à **Japan Expo** laisse rêveur : **Kazuo KOIKE**, **Takeshi OBATA**, **Yoshiyuki SADAMOTO**, **Oh!Great** et bien d'autres. Les noms mentionnés ci-dessous ne concernent que les personnalités japonaises les plus connus. Le nombre de 50 invités a été avancé, un total très conséquent.
@@ -39,6 +41,6 @@ Takeshi OBATA
 Les autres invités
 ------------------
 
- Parmi un grand nombre d'auteurs de _manwha_, du _manhua_, de bande-dessinée européennes et de _comics_, nous avions également le plaisir de croiser **Oh!Great**, venu nous présenter son travail sur le jeu vidéo _**Soul Calibur 4**_. **Dorothée** était également de la partie pour une séance de dédicaces de son nouveau livre _**Les Années Dorothée**_. Pas de conférence ceci dit pour l'animatrice de nos matins d'enfant. Pour les amateurs de bande-dessinée franco-belge, le grand maître **Jean Giraud dit Moëbius** était également présent pour des séances de dédicaces exceptionnelles. Bref, une grande diversité dans la liste des invités, mais seuls les invités japonais ont été grandement mis en avant lors de la promotion du festival, comme toujours... [Chapitre suivant : Le Cosplay ](/index.php/japan-expo-2008-le-cosplay)
+ Parmi un grand nombre d'auteurs de _manwha_, du _manhua_, de bande-dessinée européennes et de _comics_, nous avions également le plaisir de croiser **Oh!Great**, venu nous présenter son travail sur le jeu vidéo _**Soul Calibur 4**_. **Dorothée** était également de la partie pour une séance de dédicaces de son nouveau livre _**Les Années Dorothée**_. Pas de conférence ceci dit pour l'animatrice de nos matins d'enfant. Pour les amateurs de bande-dessinée franco-belge, le grand maître **Jean Giraud dit Moëbius** était également présent pour des séances de dédicaces exceptionnelles. Bref, une grande diversité dans la liste des invités, mais seuls les invités japonais ont été grandement mis en avant lors de la promotion du festival, comme toujours... [Chapitre suivant : Le Cosplay ](japan-expo-2008-le-cosplay)
 
-[Retour au Sommaire](/index.php/dossier-japan-expo-2008)
+[Retour au Sommaire](dossier-japan-expo-2008)

@@ -1,14 +1,62 @@
 ---
 layout: default
 ---
-<article class="post">
+<div id="mainpage">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+  {% assign page_url = page.slug | prepend: "/" | prepend: site.baseurl %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+	<a href="#" onclick="history.back(); return false;" id="back-link" class="screen">Retour</a>
+	<h1><a href="{{ post_url }}">{{ page.title }}</a></h1>
 
-</article>
+	<div class="module">
+		<div class="module-header screen"><img src="css/images/inside/header.jpg" /></div>
+		<div class="contents">
+			<div class="postmeta">
+				<p>
+					<a href="{{ post_url }}">
+						<img src="{{ page.illustration | prepend: "/database/" | prepend: site.baseurl }}" alt="{{ page.title }}" class="content" border="0" />
+					</a>
+				</p>
+			</div>
+
+			<div class="texttools screen">
+				<a href="#" rel="zoom-increase" title="Augmenter la taille du texte"><img src="css/images/icone-texte-plus.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="5" />
+				<a href="#" rel="zoom-reset" title="Rétablir la taille du texte"><img src="css/images/icone-texte-normal.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="5" />
+				<a href="#" rel="zoom-decrease" title="Diminuer la taille du texte"><img src="css/images/icone-texte-moins.png" border="0" /></a>
+				<img src="css/images/spacer.gif" width="30" height="30" />
+				<a href="#" onclick="window.print(); return false;" title="Imprimer"><img src="css/images/icone-imprimante.png" border="0" /></a>
+			</div>
+
+			<div class="postcontent" rel="zoomable">
+				{{ content }}
+
+				{% capture formatted_date %}
+					{% assign m = page.date | date: "%-m" %}
+					{{ page.date | date: "%d" }}
+					{% case m %}
+					  {% when '1' %}janvier
+					  {% when '2' %}février
+					  {% when '3' %}mars
+					  {% when '4' %}avril
+					  {% when '5' %}mai
+					  {% when '6' %}juin
+					  {% when '7' %}juillet
+					  {% when '8' %}août
+					  {% when '9' %}septembre
+					  {% when '10' %}octobre
+					  {% when '11' %}novembre
+					  {% when '12' %}décembre
+					{% endcase %}
+					{{ page.date | date: "%Y" }}
+				{% endcapture %}
+
+				<p class="postcredits"><img alt='' src='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625' srcset='https://www.gravatar.com/avatar/385cf3c88bc02f4af666cf51a663c625?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />Dossier publi&eacute; le {{ formatted_date }}<br /> par <strong>Christophe SAUVEUR</strong></p>
+      </div>
+    </div>
+
+			<div class="module-footer screen"><img src="css/images/inside/footer.jpg" /></div>
+		</div>
+
+</div>

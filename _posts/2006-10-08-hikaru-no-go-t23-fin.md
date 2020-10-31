@@ -40,7 +40,7 @@ meta:
     value: "Japonais"
 ---
 
-Il y a bientôt deux ans de cela, j'écrivais [ma première chronique de ce site](http://www.mangaleera.com/index.php/2) sur le volume 12 d'**_Hikaru no Go_**. Onze tomes nous séparent depuis, et ces 23 moments d'histoire nous ont appris ce qu'était le go. Retour sur un _manga_ passionnant...
+Il y a bientôt deux ans de cela, j'écrivais [ma première chronique de ce site](2) sur le volume 12 d'**_Hikaru no Go_**. Onze tomes nous séparent depuis, et ces 23 moments d'histoire nous ont appris ce qu'était le go. Retour sur un _manga_ passionnant...
 
 Hikaru SHINDO est un jeune collégien japonais de 11 ans. Alors qu'il joue avec son amie Akari dans le grenier de son grand-père, il tombe sur un vieux _goban_, équivalent de l'échiquier dans le jeu de go. C'est alors qu'un être désincarné fait son apparition devant lui : Saï FUJIWARA, le plus grand joueur de go de tous les temps. Mort depuis 1000 ans, Saï rêve de pouvoir rejouer à son jeu favori. Il entraîne donc le jeune Hikaru à la découverte de ce jeu de stratégie ancestral. Et il va se révéler être un très bon élève.
 

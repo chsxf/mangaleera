@@ -7,4 +7,4 @@ categories:
   - "divers"
 ---
 
-Dans [cette chronique](http://www.mangaleera.com/index.php/2/), je vous annonçais la sortie d'un coffret **_Hikaru no Go_** qui accompagnerait la sortie du volume 13. [Tonkam](http://www.tonkam.com) informe aujourd'hui ses clients que ce coffret est finalement annulé. L'info est relayée par le site [Mangajima](http://www.mangajima.com) via [cette news](http://www.mangajima.com/actu/index.php?p=453).
+Dans [cette chronique](2/), je vous annonçais la sortie d'un coffret **_Hikaru no Go_** qui accompagnerait la sortie du volume 13. [Tonkam](http://www.tonkam.com) informe aujourd'hui ses clients que ce coffret est finalement annulé. L'info est relayée par le site [Mangajima](http://www.mangajima.com) via [cette news](http://www.mangajima.com/actu/index.php?p=453).

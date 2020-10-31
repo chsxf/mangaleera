@@ -31,6 +31,10 @@ defaults:
     values:
       permalink: "/:slug"
 
+# Collections
+collections:
+  - dossiers
+
 # Useful
 empty_array: []
 

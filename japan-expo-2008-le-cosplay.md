@@ -2,6 +2,8 @@
 layout: page
 title: "Japan Expo 2008 : Le Cosplay"
 slug: japan-expo-2008-le-cosplay
+illustration: dossiers/je2008/je2008-logo.jpg
+date: 2008-07-13 00:00:00 +0200
 ---
 
 En dehors des conférences des invités, l'autre grand événement de **Japan Expo** (et de toute convention qui se respecte) est bien entendu le défilé de _cosplay_. Comme toujours, au vu d'une affluence massive de participants, le défilé est scindé en deux parties : le **Cosplay Individuels** et le **Cosplay Groupes**.
@@ -23,6 +25,6 @@ Le défilé Groupes
 
  Une fois remis de nos émotions et à l'issue du défilé Groupes, les dix duos présélectionnés du [World Cosplay Summit](http://www.tv-aichi.co.jp/wcs/e/) ont défilé afin de nous montrer leurs plus beaux costumes. Rappelons que, pour la deuxième année consécutives, le World Cosplay Summit fait étape à Japan Expo pour sélectionner le duo français qui ira représenter la France au Japon pour la finale. A noter que l'édition 2007 avait été remporté par la France. ![Japan Expo 2008 - Cosplay Clover](/database/dossiers/je2008/je2008-cosplay-clover.jpg)
 
- La grande tendance de cette année s'est articulée autour d'une ancienne série de **Clamp** : _**Trèfle / Clover**_, puisque deux groupes avaient décidé d'en tirer leurs costumes. C'est d'ailleurs un de ces deux groupes qui a été sélectionnés pour concourrir pendant la finale. Bonne chance ! [Chapitre suivant : Le Bilan ](/index.php/japan-expo-2008-le-bilan)
+ La grande tendance de cette année s'est articulée autour d'une ancienne série de **Clamp** : _**Trèfle / Clover**_, puisque deux groupes avaient décidé d'en tirer leurs costumes. C'est d'ailleurs un de ces deux groupes qui a été sélectionnés pour concourrir pendant la finale. Bonne chance ! [Chapitre suivant : Le Bilan ](japan-expo-2008-le-bilan)
 
-[Retour au Sommaire](/index.php/dossier-japan-expo-2008)
+[Retour au Sommaire](dossier-japan-expo-2008)

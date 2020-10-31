@@ -2,6 +2,8 @@
 layout: page
 title: "Japan Expo 2008 : Le Bilan"
 slug: japan-expo-2008-le-bilan
+illustration: dossiers/je2008/je2008-logo.jpg
+date: 2008-07-13 00:00:00 +0200
 ---
 
 Après un événement tel que **Japan Expo**, les émotions sont encore bien présentes, les frustrations aussi. C'est pourquoi nous avons attendu quelques jours avant de vous faire part de nos impressions à froid, une fois pesés le pour et le contre. L'édition 2008 laissait présager du meilleur et, malheureusement, cet idéal n'a pas été atteint.
@@ -19,4 +21,4 @@ Conclusion
 
  On peut reprocher énormément de choses au festival, notamment cette année (billetterie Zen chère pour l'apport, les nombreuses annulations et modifications du programme sans sommation, etc...), mais il faut reconnaître qu'il s'agit du seul événement européen capable de déplacer en aussi grand nombre les auteurs japonais réputés pour être totalement indisponibles et ultra préservés. D'autant que toutes les critiques que nous avons émises jusque là ne semblent pas gêner grand monde puisque chaque année le festival compte de plus en plus de visiteurs (la barre des 100000 devrait être franchie cette année), preuve s'il en est que **Japan Expo** bénéficie d'une aura toujours plus grande. Quoi qu'il en soit, nous sommes les premiers à noter ce qui pourrait être améliorés, témoins de l'évolution années après années de cette magnifique aventure, mais nous serons probablement aussi dans les premiers à appareiller pour la saison 2009 et fêter dignement la dixième édition de **Japan Expo**.
 
-[Retour au Sommaire](/index.php/dossier-japan-expo-2008)
+[Retour au Sommaire](dossier-japan-expo-2008)

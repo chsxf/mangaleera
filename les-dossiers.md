@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: dossiers
 title: "Les Dossiers"
 slug: les-dossiers
 ---
 
-blabla
