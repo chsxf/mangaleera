@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sorties Manga Mars 2008"
-date: 2008-02-29 22:12:18 +0200
+date: 2008-03-01 00:12:18 +0200
 slug: sorties-manga-mars-2008
 categories:
   - "agenda-des-sorties"

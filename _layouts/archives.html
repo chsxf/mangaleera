@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div id="mainpage">
+
+	<a href="#" onclick="history.back(); return false;" id="back-link" class="screen">Retour</a>
+    <h1><a href="{{ page.post_url }}">{{ page.title }}</a></h1>
+    
+    <div class="module">
+        <div class="module-header screen"><img src="{{ "/css/images/inside/header.jpg" | prepend: site.baseurl }}" /></div>
+        <div class="contents">
+        {% assign alt = 0 %}
+        {% for post in page.posts %}
+            {% if alt == 1 %}
+                {% assign alt_class = "alt" %}
+            {% else %}
+                {% assign alt_class = "" %}
+            {% endif %}
+            {% assign alt = alt | plus: 1 | modulo: 2 %}
+
+            {% assign url = post.slug | prepend: "/" | prepend: site.baseurl %}
+            <div class="postsample {{ alt_class }}">
+                {% if post.illustration %}
+                <a href="{{ url }}" class="illustration" title="{{ post.title }}"><img src="{{ post.illustration | prepend: "/database/" | prepend: site.baseurl }}" alt="{{ post.title }}" class="content" border="0" /></a>
+                {% endif %}
+                <h1><a href="{{ url }}">{{ post.title }}</a></h1>
+                <p>{{ post.excerpt }} [...]</p>
+                <p class="screen"><a href="{{ url }}">Lire la chronique dans son intégralité</a> »</p>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="module-footer screen"><img src="{{ "/css/images/inside/footer.jpg" | prepend: site.baseurl }}" /></div>
+    </div>
+
+</div>

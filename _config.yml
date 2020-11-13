@@ -24,8 +24,7 @@ compress_html:
 
 # Frontmatter defaults
 defaults:
-  -
-    scope: 
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -38,7 +37,9 @@ collections:
 # Useful
 empty_array: []
 
-# A supprimer
-email: your-email@domain.com
-twitter_username: jekyllrb
-github_username:  jekyll
+exclude:
+  - build_meta_pages.php
+  - .vscode
+
+include:
+  - _archives
