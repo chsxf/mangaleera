@@ -40,6 +40,9 @@ empty_array: []
 exclude:
   - build_meta_pages.php
   - .vscode
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 include:
   - _archives
