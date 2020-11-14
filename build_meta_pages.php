@@ -2,7 +2,7 @@
 ob_start();
 ?>
 ---
-layout: archives
+layout: %LAYOUT%
 title: "%TITLE%"
 permalink: %PERMALINK%
 posts:
@@ -10,7 +10,7 @@ posts:
 ---
 
 <?php
-$archiveTemplate = ob_get_clean();
+$metaPageTemplate = ob_get_clean();
 
 chdir(dirname(__FILE__));
 
@@ -40,6 +40,7 @@ if (!empty($regs)) {
 
 // Sorting posts by date
 $postsByMonth = [];
+$postsByTag = [];
 $files = scandir('_posts');
 foreach ($files as $file) {
     if (preg_match('/\.md$/', $file)) {
@@ -51,7 +52,22 @@ foreach ($files as $file) {
         $lines = explode("\n", trim($frontMatter));
         $illustration = NULL;
         $nextLineIsIllustration = false;
+        $inTags = false;
+        $tags = [];
         foreach ($lines as $line) {
+            if ($inTags) {
+                if (preg_match('/^  - "(.+)"$/', $line, $regs)) {
+                    $tags[] = $regs[1];
+                }
+                else {
+                    $inTags = false;
+                }
+            }
+
+            if ($line == 'tags:') {
+                $inTags = true;
+            }
+
             if (preg_match('/^date: (.+)$/', $line, $regs)) {
                 $date = $regs[1];
             }
@@ -94,22 +110,37 @@ foreach ($files as $file) {
         $excerpt = str_replace('"', '\"', $excerpt);
         $excerpt = trim($excerpt);
 
-        $month = substr($date, 0, 7);
-        if (!array_key_exists($month, $postsByMonth)) {
-            $postsByMonth[$month] = [];
-        }
-        $postsByMonth[$month][] = [
+        $post = [
             'date' => $date,
             'slug' => $slug,
             'title' => $title,
             'illustration' => $illustration,
             'excerpt' => $excerpt
         ];
+        
+        $month = substr($date, 0, 7);
+        if (!array_key_exists($month, $postsByMonth)) {
+            $postsByMonth[$month] = [];
+        }
+        $postsByMonth[$month][] = $post;
+
+        foreach ($tags as $tag) {
+            if (!array_key_exists($tag, $postsByTag)) {
+                $postsByTag[$tag] = [];
+            }
+            $postsByTag[$tag][] = $post;
+        }
     }
 }
 
 foreach ($postsByMonth as &$postsOfAMonth) {
     usort($postsOfAMonth, function($a, $b) {
+        return -strcmp($a['date'], $b['date']);
+    });
+}
+
+foreach ($postsByTag as &$postsOfTag) {
+    usort($postsOfTag, function($a, $b) {
         return -strcmp($a['date'], $b['date']);
     });
 }
@@ -140,7 +171,7 @@ foreach ($terms['archives'] as $archive) {
     $title = "Archives de {$archive['name']}";
     $permalink = $archive['permalink'];
     $month = str_replace('/', '-', ltrim($permalink, '/'));
-    $filename = sprintf("_archives/archive-%s.html", $month);
+    $filename = sprintf("_archives/archive-%s.md", $month);
 
     $posts = '';
     foreach ($postsByMonth[$month] as $post) {
@@ -154,6 +185,48 @@ foreach ($terms['archives'] as $archive) {
     }
     $posts = rtrim($posts);
 
-    $archiveContents = str_replace([ '%TITLE%', '%PERMALINK%', '%POSTS%' ], [ $title, $permalink, $posts ], $archiveTemplate);
+    $archiveContents = str_replace(
+        [ '%LAYOUT%', '%TITLE%', '%PERMALINK%', '%POSTS%' ], 
+        [ 'archives', $title, $permalink, $posts ], 
+        $metaPageTemplate
+    );
     file_put_contents($filename, $archiveContents);
+}
+
+// ----------------------
+//  TAGS
+// ----------------------
+
+// Removing existing tag files
+$files = scandir('_tags');
+foreach ($files as $file) {
+    if (preg_match('/^archive-\d{4}-\d{2}\.html$/', $file)) {
+        unlink("_tags/{$file}");
+    }
+}
+
+// Building tag files
+foreach ($postsByTag as $tag => $postsOfTag) {
+    $title = "Chroniques &laquo; {$tag} &raquo;";
+    $permalink = "/tag/{$tag}";
+    $filename = "_tags/{$tag}.md";
+
+    $posts = '';
+    foreach ($postsOfTag as $post) {
+        $posts .= "  -\n";
+        $posts .= "    title: \"{$post['title']}\"\n";
+        $posts .= "    slug: {$post['slug']}\n";
+        $posts .= "    excerpt: \"{$post['excerpt']}\"\n";
+        if (!empty($post['illustration'])) {
+            $posts .= "    illustration: \"{$post['illustration']}\"\n";
+        }
+    }
+    $posts = rtrim($posts);
+
+    $tagContents = str_replace(
+        [ '%LAYOUT%', '%TITLE%', '%PERMALINK%', '%POSTS%' ], 
+        [ 'tags', $title, $permalink, $posts ], 
+        $metaPageTemplate
+    );
+    file_put_contents($filename, $tagContents);
 }

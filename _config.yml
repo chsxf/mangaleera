@@ -43,3 +43,4 @@ exclude:
 
 include:
   - _archives
+  - _tags
