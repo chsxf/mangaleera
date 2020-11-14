@@ -41,6 +41,7 @@ if (!empty($regs)) {
 // Sorting posts by date
 $postsByMonth = [];
 $postsByTag = [];
+$postsByCategory = [];
 $files = scandir('_posts');
 foreach ($files as $file) {
     if (preg_match('/\.md$/', $file)) {
@@ -54,6 +55,8 @@ foreach ($files as $file) {
         $nextLineIsIllustration = false;
         $inTags = false;
         $tags = [];
+        $inCategories = false;
+        $categories = [];
         foreach ($lines as $line) {
             if ($inTags) {
                 if (preg_match('/^  - "(.+)"$/', $line, $regs)) {
@@ -64,8 +67,21 @@ foreach ($files as $file) {
                 }
             }
 
+            if ($inCategories) {
+                if (preg_match('/^  - "(.+)"$/', $line, $regs)) {
+                    $categories[] = $regs[1];
+                }
+                else {
+                    $inCategories = false;
+                }
+            }
+
             if ($line == 'tags:') {
                 $inTags = true;
+            }
+
+            if ($line == 'categories:') {
+                $inCategories = true;
             }
 
             if (preg_match('/^date: (.+)$/', $line, $regs)) {
@@ -130,6 +146,13 @@ foreach ($files as $file) {
             }
             $postsByTag[$tag][] = $post;
         }
+
+        foreach ($categories as $category) {
+            if (!array_key_exists($category, $postsByCategory)) {
+                $postsByCategory[$category] = [];
+            }
+            $postsByCategory[$category][] = $post;
+        }
     }
 }
 
@@ -141,6 +164,12 @@ foreach ($postsByMonth as &$postsOfAMonth) {
 
 foreach ($postsByTag as &$postsOfTag) {
     usort($postsOfTag, function($a, $b) {
+        return -strcmp($a['date'], $b['date']);
+    });
+}
+
+foreach ($postsByCategory as &$postsOfCategory) {
+    usort($postsOfCategory, function($a, $b) {
         return -strcmp($a['date'], $b['date']);
     });
 }
@@ -161,7 +190,7 @@ function cleanMarkdownTags($contents) {
 // Removing existing archive files
 $files = scandir('_archives');
 foreach ($files as $file) {
-    if (preg_match('/^archive-\d{4}-\d{2}\.html$/', $file)) {
+    if (preg_match('/^archive-\d{4}-\d{2}\.md$/', $file)) {
         unlink("_archives/{$file}");
     }
 }
@@ -200,7 +229,7 @@ foreach ($terms['archives'] as $archive) {
 // Removing existing tag files
 $files = scandir('_tags');
 foreach ($files as $file) {
-    if (preg_match('/^archive-\d{4}-\d{2}\.html$/', $file)) {
+    if (preg_match('/^tag-.+\.md$/', $file)) {
         unlink("_tags/{$file}");
     }
 }
@@ -209,7 +238,7 @@ foreach ($files as $file) {
 foreach ($postsByTag as $tag => $postsOfTag) {
     $title = "Chroniques &laquo; {$tag} &raquo;";
     $permalink = "/tag/{$tag}";
-    $filename = "_tags/{$tag}.md";
+    $filename = "_tags/tag-{$tag}.md";
 
     $posts = '';
     foreach ($postsOfTag as $post) {
@@ -229,4 +258,81 @@ foreach ($postsByTag as $tag => $postsOfTag) {
         $metaPageTemplate
     );
     file_put_contents($filename, $tagContents);
+}
+
+// ----------------------
+//  CATEGORIES
+// ----------------------
+
+// Removing existing category files
+$files = scandir('_categories');
+foreach ($files as $file) {
+    if (preg_match('/^category-.+\.md$/', $file)) {
+        unlink("_categories/{$file}");
+    }
+}
+
+// Building tag files
+foreach ($postsByCategory as $category => $postsOfCategory) {
+    $categoryData = getCategoryDataBySlug($category);
+    
+    $title = "Chroniques &laquo; {$categoryData['name']} &raquo;";
+    $permalink = getCategoryPath($categoryData);;
+    $filename = "_categories/category-{$category}.md";
+
+    $posts = '';
+    foreach ($postsOfCategory as $post) {
+        $posts .= "  -\n";
+        $posts .= "    title: \"{$post['title']}\"\n";
+        $posts .= "    slug: {$post['slug']}\n";
+        $posts .= "    excerpt: \"{$post['excerpt']}\"\n";
+        if (!empty($post['illustration'])) {
+            $posts .= "    illustration: \"{$post['illustration']}\"\n";
+        }
+    }
+    $posts = rtrim($posts);
+
+    $categoryContents = str_replace(
+        [ '%LAYOUT%', '%TITLE%', '%PERMALINK%', '%POSTS%' ], 
+        [ 'categories', $title, $permalink, $posts ], 
+        $metaPageTemplate
+    );
+    file_put_contents($filename, $categoryContents);
+}
+
+function getCategoryDataBySlug($categorySlug) {
+    global $terms;
+
+    foreach ($terms['categories'] as $categoryData) {
+        if ($categoryData['slug'] == $categorySlug) {
+            return $categoryData;
+        }
+    }
+
+    return NULL;
+}
+
+function getCategoryDataById($categoryId) {
+    global $terms;
+
+    foreach ($terms['categories'] as $categoryData) {
+        if ($categoryData['id'] == $categoryId) {
+            return $categoryData;
+        }
+    }
+
+    return NULL;
+}
+
+function getCategoryPath($categoryData) {
+    global $terms;
+
+    $path = "{$categoryData['slug']}";
+    $currentCategoryData = $categoryData;
+    while (!empty($currentCategoryData['parent'])) {
+        $currentCategoryData = getCategoryDataById($currentCategoryData['parent']);
+        $path = "{$currentCategoryData['slug']}/{$path}";
+    }
+
+    return "/category/{$path}";
 }
