@@ -9,11 +9,11 @@
 markdown: kramdown
 
 # Site settings
-baseurl: "/mangaleera" # the subpath of your site, e.g. /blog
-url: "https://xhaleera.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mangaleera.com" # the base hostname & protocol for your site
 
 # Meta settings
-title: Mangaleera » Chroniques manga
+title: Mangaleera &raquo; Chroniques manga
 description: "Mangaleera : Chroniques manga, anime, Japon - Planning des sorties manga"
 keywords: "manga, japon, anime, chronique, sortie, planning, librairie, bd"
 google_verify: "_sh3dTOkxFbphrHcjok76nc3hyhie2kYfo5CAmyZBFg"
